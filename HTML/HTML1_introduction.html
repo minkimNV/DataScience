@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Self Introduction </title>
+        <meta charset = 'utf-8'>
+        <style>
+            div {
+                width: 100%;
+            }
+            div.left {
+                width: 40%;
+                float: left;
+                text-align: center;
+            }
+            /* . -> class 속성, # -> id 속성 */
+            div.right {
+                width: 60%;
+                float: right;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 style = "text-align: center;"> 자기소개 </h1>
+        <hr>
+        <div>
+            <div class = "left">
+                <p 
+                style = "margin-bottom: 0px; font-size: 15px;"
+                > 
+                망그러진 <a href = "https://www.naver.com/"> 망고미 </a> 는 클릭하면 현재창에서 이동한당<br>
+                망그러진 <a href = "https://www.naver.com/" target = "self"> 망고미</a> 는 새탭 <br>
+                망그러진 <a href = "https://www.naver.com/" target = "blank"> 망고미</a> 도 새탭 <br>
+                망그러진 <a href = "https://www.naver.com/" target = "_blank"> 망고미</a> 도 새탭 <br>
+                </p>
+                <img src = "https://item.kakaocdn.net/do/dc9561970173c28a13654c3f14180b4b617ea012db208c18f6e83b1a90a7baa7" 
+                width = "70%" alt = 'no picture' usemap = "#좌표찍기"/>
+
+                <map name = "좌표찍기">
+                    <area 
+                        shape = "rect" coords = "15, 239, 237, 433"
+                        href = "https://www.naver.com/"
+                        target = "_blank" alt = "no picture"
+                    >
+                </map>
+                <p style = "margin-top: 0px; font-size: 15px;"> 좌표찍기 성공 </p>
+            </div>
+            <div class = "right">
+                <blockquote>
+                <h2> Who Am I? </h2> 
+
+                <ul id = "menu">
+                    <li> <a href = "#content1"> Skills</a></li>
+                    <li> <a href = "#content2"> Hobby</a></li>
+
+                </ul>
+
+                <figure>
+                    <figcaption>
+                        <p> <b> 인적 사항 </b> </p>
+                    </figcaption>
+                    <table border = "1" style = 'text-align: left'>
+                        <colgroup>
+                            <col style = "width = 100px;">
+                            <col style = "width = 300px;">
+                            <col style = "width = 100px;">
+                            <col style = "width = 300px;">
+                        </colgroup>
+                        <caption>
+                            <b> 원하는 위치에 캡션 달기 </b>
+                        </caption>
+                        <tr>
+                            <th> Name </th>
+                            <td> 김민희 </td>
+                            <th> Phone </th>
+                            <td> 010 6620 0026 </td>
+                        </tr>
+                        <tr>
+                           <th> Email </th>
+                            <td colspan = "3"> minizzz56@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th> Address </th>
+                            <td colspan = "3"> 경기도 부천시 원미구 </td>
+                        </tr>
+                        <tr> 
+                            <th> Introduction </th>
+                            <td colspan = "3"> 안녕 나는 미니라고 해 나는 구냥 가만히 누워서 멍이나 때리고 시퍼 </td>
+                        </tr>
+                    </table>
+                </figure>
+
+               
+                <hr>
+
+
+                <blockquote>
+                <h3 id = "content1"> Ability </h3>
+                <p>
+                    <a href = "#menu"> 메뉴로 이동하기</a>
+                </p>
+                <ul>
+                    <li> 사용 언어:
+                        <ul>
+                            <li> Python </li>
+                            <li> C# </li>
+                            <li> JAVA </li>
+                            <br>
+                        </ul>
+                    </li>
+                
+                    <li> 학교 프로젝트:
+                        <ul> 
+                            <li> 로보틱스 프로젝트 </li>
+                            <li> 온라인 2D 게임 프로젝트 </li>
+                            <li> VR 게임 프로젝트 </li>
+                        </ul><br>
+                    </li>
+
+                    <li> 개인 프로젝트:
+                        <ul>
+                            <li> SQL 프로젝트 </li>
+                            <li> 데이터 분석 프로젝트 (은행 이탈 고객 데이터셋 이용, 예측 모델, 예측 인사이트 제공) </li>
+                        </ul>
+                    </li>
+                </ul>
+                </blockquote>
+                <hr>
+
+
+                <blockquote>
+                <h4 id = "content2"> 취미 및 특기 </h4>
+                <p>
+                    <a href = "#menu"> 메뉴로 이동하기</a>
+                </p>
+                <ul>
+                    <li> 취미 
+                        <ol>
+                            <li> 전시회 </li>
+                            <li> 독서 </li>
+                            <li> 운동 </li>
+                        </ol><br>
+                    </li>
+                    <li> 특기
+                        <ol type = 'a' start = '1'>
+                            <li> 요리 잘함 </li>
+                            <li> 알쓸신잡 모음 </li>
+                        </ol>
+                    </li>
+                </ul>
+                </blockquote>
+            </div>
+        </div>
+
+    
+    </body>
+</html>
