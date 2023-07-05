@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> Self Introduction </title>
+        <!-- 만들려는 인터넷 창의 이름은 Self Introduction 이야 -->
+        <meta charset = 'UTF-8'>
+        <style>
+            div {
+                width: 100%;
+            }
+            div.left {
+                width: 40%;
+                float: left;
+                text-align: center;
+            }
+            div.right {
+                width: 60%;
+                float: right;
+                text-align: left;
+            }
+            /* . -> class 속성
+               # -> id 속성 */
+        </style>
+        <!-- div 창 화면을 100%으로 놓고 보았을 때
+            div.left & div.right 왼쪽과 오른쪽을 구분해서 볼거야
+            div.left 는 전체 창의 40%, 왼쪽에 쓰여지는 글자는 중앙정렬
+            div.right 는 전체 창의 60%, 텍스트는 오른쪽정렬 할거야 -->
+    </head>
+
+    <body>
+        <!-- 인터넷 화면을 구성하는 부분이야 화면에서 보여지고 싶은건 다 여기! body 안에서 하도록 하자구 -->
+
+
+        <h1 style = 'text-align: center;'> 자기소개 </h1>
+        <!-- h1, h2, ... hn 은 제목같은거야 -->
+        <!-- 꺽새괄호를 닫기 전에 style 지정을 할 수 있어
+             텍스트를 중앙 정렬 하겠다고 스타일 지정을 해봤어 
+             세미콜론을 잊지마 -->
+        <hr> 
+        <!-- 구간 나누려고 가로줄을 길게 그어보았어 -->
+
+
+        <div>
+            <div class = "left">
+            <!-- 왼쪽에 둘 내용을 만드는거에용  -->
+
+
+                <p style = "margin-bottom: 0px; font-size: 15px;">
+                <!-- 내용을 쓰려고 할 때에는 <p> 해주면 되고 여기서도 꺽새괄호 닫기 전에 style 지정 할 수 있어~! -->
+                <!-- 이건 지금 사진 위에 달아주는 캡션 대용 텍스트 태그라서 스타일로 "margin-bottom"을 지정해줬는데
+                     만약 사진 아래에 캡션 대용 텍스트 태그 해줄거면 margin-top으로 빈칸을 메꾸면 되용 -->
+                <a href = "https://e.kakao.com/t/broken-bear-ver-6?t_ch=share_link_web" target = "_blank"> 내 사진</a>
+                <!-- 이 주석은 바로 아래에 있는 img 태그를 보고 읽어야 해!
+                     "내 사진"이라는 텍스트를 써주고 아래에 사진을 넣었어. 근데 사실 내 사진 아님ㅋ
+                     그래서 <a></a> 를 이용해서 링크 연결 밑줄을 그려주었고
+                     href = "link.com"을 사용해서 출처를 정했고
+                     target = "_blank" 를 이용해서 클릭하면 새 탭에서 열리게 했어. target 안쓰면 현재창에서 열린다 -->
+                </p>
+                <img src = 'imgg.jpg' width = 60% alt = "No picture" usemap = "#reference">
+                <!-- img src 이미지 넣어줄 때 사용하는 태그
+                     width는 퍼센테이지로 설정했어. 왜냐면 창 화면 크기가 맞게 사진 크기가 조정되고든..ㅎ
+                     alt는 사진 엑박 뜰 때 옆에 써줄 말 같은건가봐..? 노확실 허허
+                     그 옆에 usemap은 사진에도 특정 구역에 좌표를 찍어서 링크 연결 해주려는 그런 기능이야.
+                     usemap과 관련한 map 태그 내용은 바로 아래에 있어용 ! -->
+                
+
+                <!-- 사진에 출처 링크 걸기! -->
+                <map name = "reference">
+                    <area
+                        shape = "rect" coords = "15, 239, 237, 433"
+                        href = "https://e.kakao.com/t/broken-bear-ver-6?t_ch=share_link_web"
+                        target = "_blank" alt = "No Picture"
+                    >
+                </map>
+                <!-- coords 로 사진 어디에 링크 걸어줄지 좌표를 찍어봤어용 -->
+
+                <br>
+                <p> 이름: 김민희 </p>
+                <p> 전화번호: 010-6620-0026 </p>
+                <p> 이메일: minizzz56@gmail.com</p>
+                <p> 주소: 경기도 부천시 원미구 </p>
+            </div>
+            <!-- 여기까지 왼쪽에 둘 이미지와 내용에 대해 설정을 끝냈어용 -->
+
+
+            <div class = "right">
+            <!-- 이제 오른쪽 시작! -->
+
+
+            <!-- 아래에서 자기소개 항목들에 대해 쓰려고 하는데 굳이 한 번 작성할 항목으로 바로 갈 수 있는 링크를 만들거야 -->
+            <ul id = "menu">
+                <li> <a href = "#skills"> 스킬</a></li>
+                <li> <a href = "#experiences"> 경험</a></li>
+                <li> <a href = "#hobbys"> 취미 및 특기</a></li>
+            </ul>
+            <!-- 이렇게! 이것만 만들고 각 컨텐츠에 같은 태그를 만들어줘야해.
+                 안만들어주면 나중에 클릭해도 원하는 항목으로 안넘어가. -->
+
+
+                <blockquote>
+                <!-- 이건 문단 들여쓰기 -->
+                    <table border = "1" style = "text-align: left">
+                    <!-- 테이블로 내 인적 사항을 간단히 정리해보자구 -->
+                        <colgroup>
+                            <col style = "width: 100px;">
+                            <col style = "width: 300px;">
+                            <col style = "width: 100px;">
+                            <col style = "width: 100px;">
+                        </colgroup>
+                        <!-- 내 인적 사항 테이블에 놓일 컬럼들의 너비를 설정해줄 때 colgroup 태그를 이용해서
+                             각 컬럼의 스타일로 너비를 지정해줬어 -->
+                        <caption>
+                            <b> 인적사항 </b>
+                        </caption>
+                        <!-- 테이블에 이렇게 캡션을 달아줄 수 있는데 캡션 위치는 테이블 위야. 다른 위치에서도 해봤는데 캡션은 항상 위인가봐? -->
+                        <tr>
+                            <th> 이름 </th>
+                            <td> 김민희 </td>
+                            <th> 전화번호 </th>
+                            <td> 010-6620-0026 </td>
+                        </tr>
+                        <!-- 테이블에 들어갈 내용을 이렇게 달아줬어. tr이 아마도 table row 인가봐..
+                             첫번째 줄에 이름과 전화번호가 들어가게 해줬어. -->
+                        <tr>
+                            <th> E-mail </th>
+                            <td colspan = "3"> minizzz56@gmail.com </td>
+                        </tr>
+                        <!-- 두번째 줄!
+                             우리 컬럼이 총 4개 잖아? 셀을 합쳐줄 때 colspan 태그를 사용해줘! -->
+                        <tr>
+                            <th> 주소 </th>
+                            <td colspan = "3"> 경기도 부천시 원미구 </td>
+                        </tr>
+                        <!-- 세번째 줄 -->
+                        <tr>
+                            <th> 자기소개 </th>
+                            <td colspan = "3"> 안녕 내 이름은 김미니 난 그냥 풍경 좋은 카페에 앉아서 멍이나 때리면서 평화롭고 싶어 </td>
+                        </tr>
+                        <!-- 네번째 줄 -->
+                    </table>
+                </blockquote>
+                <hr>
+
+                <h2 id = "skills"> 스킬 </h2>
+                <!-- 위에서 바로가기 링크 만든 거 여기에 링크를 걸어주겠다고 id ="skills" 태크를 걸어줬어! -->
+                <p> <a href = "#menu"> 메뉴로 이동하기</a></p>
+                <!-- 이건 역으로 바로가기 링크로 바로가겠다는거야! -->
+                <ul>
+                    <li> Programming Languages 
+                        <ul>
+                            <li> Python </li>
+                            <li> C# </li>
+                            <li> JAVA </li>
+                            <li> R </li>
+                            <li> SPSS </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li> Foreign Languages 
+                        <ul>
+                            <li> Korean </li>
+                            <li> English </li>
+                            <li> German </li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <hr>
+
+                <h2 id = "experiences"> 경험 </h2>
+                <p> <a href = "#menu"> 메뉴로 이동하기</a></p>
+                <ul>
+                    <li> 프로젝트 
+                        <ul>
+                            <li> Cognitive Robotics Project </li>
+                            <li> Online 2D Game Creation Project </li>
+                            <li> VR Game Creation Project </li>
+                            <li> Miniproject - Using SQL </li>
+                            <li> Miniproject - Data Analysis Using ML Algorithm: Churn Prediction </li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <hr>
+
+                <h2 id = "hobbys"> 취미 및 특기 </h2>
+                <p> <a href = "#menu"> 메뉴로 이동하기</a></p>
+                <ul>
+                    <li> 취미
+                        <ol>
+                            <li> 전시회 </li>
+                            <li> 독서 </li>
+                            <li> 운동 (웨이트 트레이닝, 클라이밍, 수영, 복싱 등등..) </li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li> 특기
+                            <ol>
+                                <li> 요리 잘함</li>
+                                <li> 알쓸신잡 수집 </li>
+                                <li> 검색 잘함 </li>
+                                <li> 지도 잘 봄 </li>
+                            </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </body>
+</html>
