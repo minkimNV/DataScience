@@ -1,0 +1,31 @@
+/* 03_CSS.html 파일에서 사용할 스타일링을 지정해줄 공간(?) */
+/* . -> class , # -> ID */
+
+.p_tag{
+    font-size: 50px;
+    color: magenta;
+}
+
+#p_tag2 {
+    font-size: 50px;
+    color: brown;
+}
+
+h2.tag {
+    border: 5px solid red;
+}
+/* border로 글자에 맞는 박스 테두리를 그려주는 것이에용.
+   빨간색 굵은 선~ */
+
+h3, h4 {
+    color: orange;
+}
+/* h3 & h4 그룹핑해서 스타일 설정 */
+
+* {
+    border: 4px dotted blue;
+}
+
+/* *은 화면에 보이는 모든 영역의 텍스트에 도트 파란색 테두리를 만들어주겠다는 것.
+   리눅스에서 전체 파일을 검색해보려면 별표(*)를 사용하는뎅
+   여기서도 그러씀니다./ㅋ */

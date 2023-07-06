@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
+        <title> CSS Practice </title>
+
+        <style>
+            p {
+                color: green;
+                font-size: 30px;
+                font-weight: 900;
+            }
+        </style>
+        <!-- 2. <head> 부분 스타일링 - 내부 스타일링!
+                여기서 지정한 p에 대한 스타일링이 <body>에서 <p></p>를 사용할 때마다 적용이 된다.
+                font-weight는 글자굵기. -->
+        
+
+        <link rel = "stylesheet" href = "03_CSS.css">
+        <!-- 3. 외부 스타일링!
+                .css 파일을 만들어서 따로 스타일링을 설정해준 후 로드해서 사용하는 방법이 있다.
+                파일을 로드해줄때에는 link 태그를 사용해준다.-->
+   </head>
+
+
+    <body>
+        <h1 style = "color: red;"> Hi </h1>
+        <!-- 1. 인라인 스타일링 -->
+        
+        <p> Nice to meet you. </p>
+        <!-- [2]에서 한 스타일링이 적용된다. -->
+
+        <p class = "p_tag"> Good bye. </p>
+        <!-- [3]에서 로드해온 .css 파일의 스타일링을 적용할 때에는 이렇게..
+             .은 class고 #은 ID다. 그래서 P class 태그 사용. -->
+        
+        <p id = "p_tag2"> Sayonara~! </p>
+        <!-- [3]에서 로드한 .css 파일의 스타일링에서
+             # 으로 설정한 태그는 id이기 때문에 p id 태그를 사용. -->
+
+        
+        <h2> h2 태그를 이용해볼거에용 </h2>
+        <h2 class = "tag"> h2 태그에 h2.tag 클래스를 이용해보았어용.<br>
+            h2.tag 클래스는 빨간색 박스 테두리만 설정해주었어용.
+        </h2>
+        <!-- h2.tag 라는 이름으로 스타일링을 지정해주었기 때문에.. 
+             h2 class = "tag"로 소환(?) -->
+
+
+        <h3> h3 태그에용. h4랑 그룹핑 하고 싶어용. </h3>
+        <h4> h4 태그에용. h3이랑 그룹핑 하고 싶어용. </h4>
+        <!-- .css 파일에서 h3, h4를 묶어서 글자 색을 오렌지 색으로 설정해주었어용.
+             여기서 보니까 h3과 h4가 둘 다 오렌지색 글자네용ㅇ~~  -->
+
+    
+        
+        <!-- 스타일링에도 우선순위라는 게 있다!
+        css가 중첩될 때 Important로 지정된 것을 우선 적용한다.
+        다음 파일에서 확인해볼게용 왜냠 이 파일에 하면 복잡할 것 같자낭 ㅎㅎ -->
+
+        
+    </body>
+    </html>
