@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Text Style </title>
+
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+            /* 외부에서 글꼴을 가지고 올 때는 이렇게 import url 해주면 간편.
+                나는 fonts.google.com/earlyaccess 에서 아무거나 가지고 왔다. */
+            
+            
+            /* body {
+                font-family: "ㅁㄴㅇㄹ", "궁서", "AppleGothic";
+            } */
+            /* body 자체도 하나의 태그이기 때문에 body 전체에 적용할 스타일을 지정할 수 있다.
+                윈도우에서는 "궁서"가 있는 글꼴이라 궁서체로 나왔지만 나는 없어서
+                AppleGothic을 따로 넣어봤다. 앞선 글꼴들은 없는 글꼴이기 때문에
+                자동으로 누락(?)되고 있는 글꼴인 AppleGothic으로 출력된다. */
+            .font_test {
+                font-weight: bold;
+                /* 이건 글자 굵기~! */
+                font-family: "ㅁㄴㅇㄹ", "궁서", "AppleGothic";
+            }
+            /* 외부 글꼴을 바디의 공통 글꼴로 사용하고 앞서 테스트한 태그 스타일은 클래스 스타일로 바꿔주었당. */
+            
+        </style>
+    
+    </head>
+
+    <body>
+        <h1> 안녕하세요. 이건 외부에서 가지고 온 글꼴인 제주고딕체 입니당. </h1>
+        <p> 안녕하세요. 이건 제주고딕체 입니당. </p>
+        <h1 class = "font_test"> 안녕하세용. 이건 내부에 있는 글꼴인 애플고딕체 입니당.</h1>
+        <p class = "font_test"> 안녕하세용. 이건 애플고딕체 입니당.</p>
+        <p style = "font_style: italic; color: rgb(171, 134, 142)"> 안녕하세용. 이건 무슨 글꼴이지..? <br>
+            인라인 스타일링을 추가했어용.</p>
+        <!-- color 설정할 떄 rgb로 두고 직접 색을 조합해도 된다.
+            그거 할 수 있게 해주는 사이트도 있지만 난 그냥 랜덤 숫자 씀. -->
+        
+        
+        
+        <a href = "https://www.naver.com">
+            네이버로 이동하기
+        </a>
+
+        <p style = "text-decoration: line-through;">
+            르세라핌은 김채원, 장원영, 카즈하 등으로 구성되어 있다.
+        </p>
+        <!-- "태그" 스타일을 이용해 text-decoration 을 이용해서 취소선을 그어줄 수 있다. -->
+
+
+        <p>
+            르세라핌은
+            <span style = "color: chocolate; font-size: 20px;"> 김채원 </span>,
+            <span style = "text-decoration: line-through;"> 장원영 </span>,
+            카즈하 등으로 구성되어 있다.
+        </p>
+        <!-- span style을 이용해 원하는 글자에다가만 스타일을 지정할수도 있다. -->
+
+        <!-- 이 아래로는 각각 다른 정렬방식을 볼거다. -->
+        <p style = "text-align: center;"> 깅미니 </p>
+        <p style = "text-align: right;"> 깅미니 </p>
+        <p style = "text-align: left;"> 깅미니 </p>
+        <p> 깅미니 </p>
+        <p style = "text-align: justify;"> 깅미니ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣ </p>
+        <!-- text-align: justify 는 뭐지? -->
+
+
+
+        <blockquote>
+            깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니
+            <br> blockquote는 문단 전체 들여쓰기하겠다는거자나 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니
+        </blockquote>
+        <!-- 문단 전체 들여쓰는 태그 blockquote -->
+
+
+        <p style = "text-indent: 40px;">
+            이건 인라인 스타일링으로 첫 단어만 들여쓰기 하겠다는거자나 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니 깅alsl미니
+        </p>
+        <!-- p style로 첫 단어만 들여쓰는 태그 설정 -->
+
+
+        
+    </body>
+</html>
