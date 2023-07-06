@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewpoint" content = "width = devide-width, initial-scale = 1.0">
+        <title> 회원가입 신청서 만들기 </title>
+        <style>
+            body {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            #col1 {
+                width: 250px;
+                height: 150px;
+                background-color: gray;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            #col2 {
+                width: 400px;
+                text-align: left;
+            }
+
+            /* 테이블을 만들것이고 서로의 스타일이 다르기 때문에 각 컬럼에 대한 아이디를 만들어 테이블 컬럼그룹에 적용했다. */
+
+            #input {
+                height: 50px;
+                width: 400px;
+                font-size: 18px;
+            }
+
+            /* input 너비를 줄였는데 fieldset 크기가 줄지 않고 남아있어서 fieldset을 가운데 정렬하는게 안되는 줄 알았다.
+            fieldset은 가운데정렬이 되어있는 상태였고, Input에서의 너비와 col2 (인풋이 들어갈 컬럼)의 설정 상 너비에 차이가 있었기 때문이었음.
+            그래서 각 컬럼들과 Input의 너비를 비슷하게 조정해주었다. */
+
+
+            #regi {
+                width: 100px;
+                height: 50px;
+                background-color: slateblue;
+                border: 2px solid black;
+                font-size: 20px;
+                margin-top: 15px;
+                margin-right: 10px;
+            }
+
+            #reset {
+                width: 100px;
+                height: 50px;
+                background-color: palevioletred;
+                border: 2px solid black;
+                font-size: 20px;
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+
+            /* 가입하기, 취소하기 버튼의 경우에는 사실 배경 색 빼고는 다 똑같지만.. 일단은 두개의 아이디를 만들어서 스타일링을 해주었다.
+                신기한 건 두 버튼 중 하나만 margin-top 픽셀을 변경해줘도 같이 움직인다는 것이다.
+                왜 그런건가 보려고 이리저리 만져봤는데 시간이 별로 없어서 여기까지만. */
+
+        </style>
+    </head>
+
+
+    <body>
+        <h1 style = "text-align: center; font-weight: bold;"> 회원 가입을 해주세요. </h1>
+
+        <div style="display: flex; justify-content: center;">
+            <form>
+                <fieldset>
+                    <legend> 필수 입력 정보 </legend>
+                    <table>
+                        <colgroup>
+                            <col id = "col1">
+                            <col id = "col2"> 
+                        </colgroup>
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "user-id"> 아이디 </label></th>
+                            <td><input id = "input" type = "text" id = "user-id"></td>
+                            </li>
+                        </tr>
+
+                        <!-- <tr></tr>은 테이블에서 하나의 row에 해당한다. 
+                            <th></th>는 제목(?) 같은거고 <td></td>는 제목에 해당하는 내용.
+                            그래서 th에는 아이디, 비밀번호 와 같은 것들을 넣어줬고,
+                            td에는 각 레이블에 해당하는 인풋을 받아야 하기 때문에 그 안에 인라인으로 input을 넣어줬다. 
+                            인풋 스타일 중 공통적인 스타일에 대해서는 헤드 스타일에서 아이디를 만들어 지정하고 각 행의 인풋 마다 공통 스타일이 들어갈 수 있도록 했다. -->
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "user-pw"> 비밀번호 </label></th>
+                            <td><input id = "input" type = "password" id = "password" placeholder = "10자 이상 입력해주세요."></td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "name"> Name </label></th>
+                            <td><input id = "input" type = "text" id = "Name"></td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "mail"> E-mail address</label></th>
+                            <td><input id = "input" type = "email" id = "mail"></td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "radio"> 이메일 수신 동의 </label></th>
+                            <td id = "input">
+                                <input type = "radio" id = "radio" name = "Agreement">예
+                                <input type = "radio" id = "radio" name = "Agreement">아니오</td>
+                            </li>
+                        </tr>
+
+                        <!-- 이런 종류의 인풋 경우에는 인풋에 Id = input을 넣어주면 각 옵션마다 스타일이 지정되길래 td에 인풋 아이디를 호출(?)해서 지정해줌. -->
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "checkbox"> 선호 기술 (중복 선택) </label></th>
+                            <td id = "input">
+                                <input type = "checkbox" id = "checkbox" name = "s1" checked> 빅데이터
+                                <input type = "checkbox" id = "checkbox" name = "s2" checked> 인공지능
+                                <input type = "checkbox" id = "checkbox" name = "s3" checked> 딥러닝
+                                <input type = "checkbox" id = "checkbox" name = "s4" checked> 머신러닝
+                                <input type = "checkbox" id = "checkbox" name = "s5" checked> JAVA
+                                <input type = "checkbox" id = "checkbox" name = "s6" checked> Python
+                                <input type = "checkbox" id = "checkbox" name = "s7" checked> C++
+                                <input type = "checkbox" id = "checkbox" name = "s8" checked> C#
+                                </td>
+                            </li>
+                        </tr>
+
+
+                    </table>
+                </fieldset>
+                
+
+
+
+                <!-- fieldset 사이에 공간을 벌려주고 싶어서 margin-top을 설정해주었당. -->
+                <fieldset style = "margin-top: 25px;">
+                    <legend> 선택 입력 정보 </legend>
+                    <table>
+                        <colgroup>
+                            <col id = "col1">
+                            <col id = "col2"> 
+                        </colgroup>
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "date"> 생일 </label></th>
+                            <td><input id = "input" type = "date" id = "date"></td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = "radio"> 성별 </label></th>
+                            <td id = "input">
+                                <input type = "radio" id = "radio" name = "gender" checked>남성
+                                <input type = "radio" id = "radio" name = "gender">여성
+                            </td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                            <th><label for = ""> 직업 </label></th>
+                            <td>
+                                <select  id = "input" name = "" id = "">
+                                    <option value = "학생"> 학생</option>
+                                    <option value = "직장인"> 직장인 </option>
+                                    <option value = "변호사"> 변호사 </option>
+                                    <option value = "개발자"> 개발자 </option>
+                                </select>
+                            </td>
+                            </li>
+                        </tr>
+
+                        <tr>
+                            <li style = "list-style-type: none;">
+                                <th><label for = "intro"> 자기소개 </label></th>
+                                <td>
+                                    <textarea id = "input" name = "" id = ""></textarea>
+                                </td>
+                            </li>
+                        </tr>
+
+
+                    </table>
+                </fieldset>
+
+                <div style = "text-align: center;">
+                    <button id = "regi" type = "submit"> 가입하기 </button>
+                    <button id = "reset" type = "reset"> 취소하기 </button>
+                </div>
+
+
+            </form>
+        </div>
+        
+    </body>
+</html>
