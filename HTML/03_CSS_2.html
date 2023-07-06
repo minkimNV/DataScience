@@ -9,16 +9,17 @@
             .style {
                 color: red;
             }
-
+            /*  클래스 스타일링 */
             #style {
                 color: green;
             }
-
+            /* 아이디 스타일링 */
 
             p {
                 font-style: italic;
                 color: blue;
             }
+            /* 내부 (태그) 스타일링 */
 
             /* p {
                 color: orange !important;
@@ -33,7 +34,7 @@
     <body>
         <p> CSS priority practice! </p>
 
-        <!-- 인라인 > id > class > 태그(는 뭐지?) 순으로 우선순위 중요도!! -->
+        <!-- 인라인 > id > class > 태그 순으로 우선순위 중요도!! -->
         <p class = "style"> .style만 적용하면 .style이 반영된다. </p>
         <p class = "style" id ="style"> .style과 #style 적용하면 #style이 7 반영된다. </p>
         <p class = "style" id ="style" style = "color:lightblue;"> .style & #style & 인라인 style 적용하면 인라인style이 반영된다. </p>
