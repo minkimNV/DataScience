@@ -13,3 +13,19 @@ def solution(arr, divisor):
         answer.append(-1)
         # 6. 배열에 -1을 담아 반환한다.
     return answer
+
+
+
+
+# 신기한 답안이 진짜 많당..
+
+def solution(arr, divisor):
+    return sorted([n for n in arr if n%divisor == 0]) or [-1]
+                # 1. n은 arr에 있는 n이고 
+                                # 2. n을 divisor로 나눠서 0이 나오면
+                # 3. [ 리스트에 넣고 ]
+         # 4. 오름차순 정렬해서 반환해줘
+                                                     # 리스트에 들어가는 애들이 아무도 없으면
+                                                     # 5. -1을 반환해줘
+
+
