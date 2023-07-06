@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
+        <title> Form Practice</title>
+    </head>
+    <body>
+        <div>
+            <form action = "#">
+                <fieldset>
+                    <legend> Personal Information </legend>
+                    <ul>
+                        <li style = "list-style-type: none;">
+                            <label for = "name"> Name </label>
+                            <input type = "text" id = "Name" placeholder = "Name..">
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "mail"> E-mail address</label>
+                            <input type = "email" id = "mail" placeholder="Mail address..">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend> Log-in Information </legend>
+                    <ul>
+                        <li style = "list-style-type: none;">
+                            <input type = "hidden" id = "hidden" value = "서버에 전달할 값">
+                            <!-- type = "hidden" 보이지 않아도 서버에 전달할 값.. -->
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "user-id"> ID </label>
+                            <input type = "text" id = "user-id" placeholder = "Enter the ID">
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "user-pw"> Password</label>
+                            <input type = "password" id = "password" placeholder = "Enter the PASSWORD">
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "mail"> E-mail address</label>
+                            <input type = "email" id = "mail" placeholder="Enter Mail address">
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "tel"> Phone Number </label>
+                            <input type = "tel" id = "tel" placeholder="Enter the Phone Number"
+                            pattern = "[0-1]{3}-[0-9]{4}-[0-9]{4}">
+                            <!-- 패턴을 통해서 입력해야하는 양식을 만들어 줄 수 있당.
+                                 [0-1] 사이 숫자 중 3개 - [0-9] 사이 숫자 중 4 개 - [0-9] 사이 숫자 중 4개 -->
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "number"> Age </label>
+                            <input type = "number" id ="number" placeholder = "Age"
+                            min = "0" max = "89" style = "width: 150px;">
+                            <!-- min & max 설정으로 나이를 화살표(?) 로 선택할 수 있게 했당...; 
+                                 min & max 설정하니까 칸이 작아져서 style 을 이용해 너비를 늘려줘따..;-->
+                        </li>
+                        <li style = "list-style-type: none;">
+                            <label for = "number"> Age </label>
+                            <input type = "number" id ="number" min = "0" max = "80" step = "5">
+                            <!-- 숫자 인풋을 받을 때 step을 설정하면 설정한 step만큼 건너뛰기 가능.
+                                 여기서는 나이가 5만큼 건너뛰어진당. -->
+                        </li>
+                    </ul>
+                </fieldset>
+                <hr>
+                <button type = "submit"> Register for </button>
+                <button type = "reset"> Return </button>
+            </form>
+        </div>
+    </body>
+</html>
