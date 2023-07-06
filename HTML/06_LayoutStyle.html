@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title> 박스 모델 실습 (Layout Style) </title>
+
+        <style>
+            #div1 {
+                width: 200px;
+                height: 200px;
+                border: 5px solid blue;
+                margin-top: 5px;
+                margin-right: 20px;
+                display: inline-block;
+                /* div1을 불러온 div 블럭을 한줄로 나란히 뽑고 싶으면 display: inline-block; */
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1> 안녕 나는 h1. 블록의 형태 </h1>
+        <p> 안녕 나는 p. 블록의 형태 </p>
+        <p> 안녕 나는 p. <span> 스팬으로 감싸준 건 인라인 형태란다. 블록 안에 인라인 </span> </p>
+        
+        
+        <div id = "div1">
+            <!-- 헤드에서 정한 스타일~ 파란 선의 정사각형 그려줬음~ -->
+            <!-- 아 그리고 블록의 형태 사이트에서 확인 하려면 f12 누르라는뎅
+            나는 맥북 f12 누를 줄 모르징 그럼 오른쪽 버튼 - 검사 로 가면 보면서 설정 조절 가능 -->
+        </div>
+
+        <div id = "div1"></div>
+        <div id = "div1"></div>
+        <!-- div를 세개를 헤드에서 스타일 설정시 display: inline-block 속성 없이
+            그냥 입력하면 세로로 나열된당. -->
+
+
+    </body>
+</html>

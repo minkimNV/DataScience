@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Color & Background Practice </title>
+        <style>
+            .div1 {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                /* 배경색도 글자색처럼 16 진수 HEX, RGB 값도 가능 */
+            }
+            /* 클래스 설정을 넣어줬다. 너비, 길이 설정시 픽셀로 해주면 딱 정해진 크기.
+            퍼센테이지로 해주면 화면 크기따라 유동적으로 변화.*/
+            
+            body {
+                /* background-color: lightblue; */
+                background-image: url(https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/byFa/image/QAxZeu0rXS7f_v8lzOWLDp15jfo);
+                /* 이미지 넣기도 가능 
+                    저장된 사진을 넣으려면 url(파일명); */
+                background-repeat: no-repeat;
+                /* 배경 사진이 반복되어 나올 땐 이 설정을 해준다. 반복되게 하고 싶으면 r; */
+                
+                /* background-size: 100%; */
+                /* 배경 사진 사이즈를 퍼센테이지로 설정하면 창 사이즈에 맞게 배경이 늘어났다 줄어들었다 한다; */
+
+                background-size: 400px 600px;
+                /* 배경 관련 속성의 설정법을 익히기 위해 일단은 픽셀로 지정해서 간다! */
+                background-position: left top;
+            }
+
+            /* 위에 배경 설정들을 한줄로 해버릴 수 있당. 대신 순서랑 슬래시 꼭 지켜주세용~~! */
+            /* background: url(link) no-repeat left top / 400px 600px ; */
+
+            button {
+                width: 200px;
+                height: 50px;
+                background-color: aqua;
+                font-size: 20px;
+                border: 1px solid black;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+        <div class = 'div1'>
+            <!-- div로 색상과 배경을 설정할 수 있다. -->
+            <!-- div class 태그를 호출해 div1 클래스를 불러왔다. -->
+        </div>
+
+        <button> Register for </button>
+        <!-- 얘도 head에서 스타일 지정해서 배경 색 설정 가능! -->
+
+        <!-- 그라데이션 설정도 있긴 한뎀 쓸 일 없다. 알지 말장! -->
+    </body>
+</html>
