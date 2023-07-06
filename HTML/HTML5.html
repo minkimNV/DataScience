@@ -60,11 +60,96 @@
                             <!-- 숫자 인풋을 받을 때 step을 설정하면 설정한 step만큼 건너뛰기 가능.
                                  여기서는 나이가 5만큼 건너뛰어진당. -->
                         </li>
+                        
+                        
+                        <li style ="list-style-type: none;">
+                            <label for = "range"> Account Balance </label>
+                            <input type = "range" id = "range" min = "0" max = "999999999" step = "1000">
+                        </li>
+                        <!-- input type = "range" 로 하면 범위를 입력할 수 있게 해준다 -->
+                        
+                        
+                        <li style = "list-style-type: none;">
+                            <label for = "radio"> Gender </label>
+                            <input type = "radio" id = "radio" name = "gender"> Male
+                            <input type = "radio" id = "radio" name = "gender" checked> Female
+                        </li>
+                        
+                        
+                        <li style = "list-style-type: none;">
+                            <label for = "checkbox"> Favorite Animal</label>
+                            <br>
+                            <input type = "checkbox" id = "checkbox" name = "animal1" checked> Dog
+                            <input type = "checkbox" id = "checkbox" name = "animal2" checked> Cat
+                            <input type = "checkbox" id = "checkbox" name = "animal3"> Tiger
+                        </li>
+                        <!-- input type = "radio" 랑 "checkbox" 차이점 뭐지? 
+                             radio는 둘 중 하나만 선택/ checkbox는 다중 선택 가능-->
+
+
+                        <li style = "list-style-type: none;">
+                            <label for = "date"> Birthday </label>
+                            <input type = "date" id = "date">
+                            <!-- month/week/time. datetime-local -->
+                        </li>
+
+
+                        <!-- 선택박스에서는 선택할 리스트를 option value로 만들어준다. -->
+                        <li style = "list-style-type: none;">
+                            <label for = ""> Job </label>
+                            <select name = "" id = "">
+                                <option value = "student"> Student </option>
+                                <option value = "Salaryman"> Salary man </option>
+                                <option value = "Lawyer"> Lawyer </option>
+                                <option value = "Developer"> Developer </option>
+                            </select>
+                            <!-- 선택박스에서는 input type 대신 select name 써주고
+                                 사이트에 보여지는 이름대로 option value 를 써주면 된당. -->
+                        </li>
+                        
+
+                        <!-- 선택박스에서는 option group을 만들어줄 수 있다. -->
+                        <li style = "list-style-type: none;">
+                            <label for = ""> </label>
+                            <select name = "" id = "">
+                                <optgroup label = "르세라핌">
+                                    <option value = "LE1"> 카즈하 </option>
+                                    <option value = "LE2"> 김채원 </option>
+                                    <option value = "LE3"> 사쿠라 </option>
+                                    <option value = "LE4"> 홍은채 </option>
+                                    <option value = "LE5"> 허윤진 </option>
+                                </optgroup>
+                                <optgroup label = "레드벨벳">
+                                    <option value = "RED1"> 아이린 </option>
+                                    <option value = "RED2"> 슬기 </option>
+                                    <option value = "RED3"> 예리 </option>
+                                    <option value = "RED4"> 조이 </option>
+                                    <option value = "RED5"> 웬디 </option>
+                                </optgroup>
+                            </select>
+                        </li>
+
+
+                        <li sty;e = "list-style-type: none;">
+                            <label for = "intro"> Self Introduction </label> <br>
+                            <textarea name = "" id = "" cols = "30" rows = "5"></textarea>
+                        </li>
+                
+                
+                
+                
+                
+                
+                
                     </ul>
                 </fieldset>
+                
                 <hr>
-                <button type = "submit"> Register for </button>
-                <button type = "reset"> Return </button>
+                <div style = "text-align: center;">
+                    <button type = "submit"> Summit </button>
+                    <button type = "reset"> Reset </button>
+                </div>
+
             </form>
         </div>
     </body>
