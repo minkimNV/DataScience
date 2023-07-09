@@ -50,4 +50,4 @@ for td in range(T):     # 입력받은 테스트 데이터 갯수만큼 for-loop
         # print(answer)
     elif answer == 0:
         print("YES")
-        # print(answer)
+        # print(answer)        # 왜 계속 출력초과가 나나 했더니.. 단계마다 확인차원에서 print(answer) 했던 것들 때문이어따 ㅎ
