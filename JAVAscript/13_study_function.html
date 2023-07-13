@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> 기본 연습 </title>
+</head>
+<body>
+	<script>
+        function addNumber(num1, num2)
+        {
+            var sum = num1 + num2;
+            return sum;
+            // 함수를 실행한 결과값을 함수 밖으로 넘기는 return문
+        }
+
+        console.log(addNumber(10, 20));
+        console.log(addNumber(30, 20));
+	</script>
+    
+
+        <!-- 예약어 확인 -->
+        <!-- var = 재선언 가능, 재할당 가능 - 전역변수 -->
+        <!-- let = 재선언 불가능, 재할당 가능 - 지역변수 -->
+        <!-- const = 재선언 불가능, 재할당 불가능 - 지역변수 (상수) -->
+    <script>
+        var test = 10;
+        function testing()
+        {
+            // var test = 20; // 지역 변수
+            // 함수 내에서 var로 재선언하면 함수가 끝나고 사라진다.
+            test = 20;
+        }
+        testing();
+        console.log(test);  // output = 20
+        console.log(`${test}, ${test2}`);
+        var test2 = 30;
+    </script>
+
+
+    <script>
+        function calcSum(n)
+        {
+            let sum = 0;
+            const number = 50;
+
+            for (let i = 1; i < n + 1; i++)
+            {
+                sum = sum +i; // 1 ~ 10
+            }   // sum = 55
+
+            sum = 10000; // 재할당(O)
+            console.log(sum);
+
+            // number = 100; // 이미 number = 50으로 constant variable
+            // const number = 100; // const 변수는 재선언 X
+
+        }
+        
+        calcSum(10);
+        console.log(sum); // sum은 지역변수, 에러 발생
+
+        // 함수 내에서 변수 작성시 let
+        // 반복문에서 사용되는 카운터 변수 let
+        // 전제적인 프로그램 변수 작성 var
+        // 절대 변하지 않는 값 정의할 때 const
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>블록 변수의 특징</title>
+</head>
+<body>	
+	<script>
+		function calcSum(n)
+		{
+			let sum = 0; 	// 블록 변수 선언
+			
+			for (let i = 1; i < n; i++)
+			{
+				sum += i;
+			}
+			console.log(sum); 	//블록 변수 사용
+		}
+
+		calcSum(10);
+
+// for문의 카운터 변수는 Let을 사용하는 것이 좋다.
+// 호이스팅 방지하기 위해 var 변수는 함수 시작 부분에서 선언하도록 한다.
+		
+	</script>
+</body>
+</html>
