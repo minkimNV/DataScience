@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> 세션 선택하기 </title>
+	<link rel="stylesheet" href="css/switch.css">
+</head>
+<body>
+	<!-- 조건이 많을 때는 if문 보다는 switch문으로 흐름을 조절한다. -->
+	<script>
+		var session = prompt("관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인", "1");
+
+		switch(session)
+		{
+			case "1": document.write("<p>마케팅 세션은 <strong>1층</strong>에서 진행됩니다.</p>");
+			/* case문에서의 명령문은 콜론(:)을 붙여 지정하고,
+				명령이 둘 이상이면 중괄호 {}로 묶는다. */
+				break;
+				// 명령을 실행한 다음에는 완전히 switch문을 빠져나오도록 break문 사용
+			case "2": document.write("<p>개발 세션은 <strong>2층</strong>에서 진행됩니다.</p>");
+				break;
+			case "3": document.write("<p>디자인 세션은 <strong>3층</strong>에서 진행됩니다.</p>");
+				break;
+		default: alert("잘못 입력했습니다.");
+		// default는 사용자가 입력한 값이 case문에서 지정한 값과 일치하지 않을 때 실행한다.
+		}
+		
+	</script>
+</body>
+</html>

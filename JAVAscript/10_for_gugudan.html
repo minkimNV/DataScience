@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>구구단 - for문</title>
+	<link rel="stylesheet" href="css/gugudan.css">
+</head>
+<body>
+	<script>
+		document.write("<div> <h1> 구구단 </h1>");
+		for (var i = 2; i < 10; i++)
+		{
+			document.write("<div>");
+			document.write("<h3>" + `${i}` + "단</h3>");
+			for (var k = 1; k < 10; k++)
+			{
+				document.write(i + " X " + k + " = " + i*k + "<br>");
+			}
+			document.write("</div>");
+		}
+		document.write("</div>");
+	</script>
+</body>
+</html>
+
+
+<!-- 겸사겸사 파이썬을 생각한다고 치지 뭐...
+for i in range(2, 10, 1):
+    print(i, "단")
+    for j in range(1, 10, 1):
+        ij = i * j
+        print(f'{i}', " X ", f'{j}', " = ", f'{ij}')
+
+ㅎ..	-->

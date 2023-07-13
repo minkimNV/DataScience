@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>3의 배수인지 확인</title>
+	<link rel="stylesheet" href="css/multi3.css">
+</head>
+
+<body>
+	<div id="result"></div>
+	<script>
+		var num = prompt("숫자를 입력하세요.");
+		var displayResult = document.querySelector('#result');
+							// id가 result인 태그를 문서에서 가지고 온다.
+
+		if (num != null)
+		{
+			if(num % 3 === 0)
+			{
+				displayResult.innerHTML = num + "은 3의 배수 입니다.";
+				// 전시할 결과를 HTML 안으로 가지고 와서 = 이렇게 표현해줘;
+			}
+			else
+			{
+				displayResult.innerHTML = num + "은 3의 배수가 아닙니다.";
+
+			}
+		}
+		else
+		{
+			alert("입력이 취소되었습니다.");
+		}
+	</script>
+</body>
+</html>
+
+
+<!-- 처음에 <body> 바로 아래에 script 코드를 넣었다.
+	틀린 부분은 없었는데 계속 결과 화면이 뜨지 않아서 뭘 고쳐야 하는지 당황..
+
+	이 코드에서 발생한 오류는
+		Cannot set properties of null (setting 'innerHTML')
+	
+	오류가 난 이유는 displayResult 변수가 null인 상태에서
+	innerHTML 속성을 설정하려고 해서 발생한 것이다.
+
+	오류를 수정하기 위해 <script> ... </script> 태그를
+	HTML 문서 끝부분에 적용했다.
+	이렇게 하면 JavaScript 코드가 실행되기 전에 
+	HTML 요소가 로드되서 displayResult를 찾을 수 있기 때문이다. -->

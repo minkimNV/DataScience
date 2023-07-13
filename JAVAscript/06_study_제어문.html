@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> 제어문 연습 </title>
+	<link rel="stylesheet" href="css/multi3.css">
+</head>
+<body>
+
+    <!-- if... else 문 연습 -->
+    <script>
+        if (true) {
+            document.write("if문의 조건을 만족하여 이 문장을 실행합니다.");
+        }
+        else {
+            document.write("if문의 조건을 만족하지 못해 이 문장을 실행합니다.");
+        }
+    </script>
+
+
+    <!-- if ... else 문 연습 2 -->
+    <script>
+        var number = prompt("Enter a number: ");
+        if (number < 0)
+        {
+            alert("Enter a bigger number than 0");
+        }
+        else
+        {
+            document.write("Entered Number : " + number);
+        }
+    </script>
+
+
+    <!-- 조건 연산자. 조건이 1개이고 실행 명령도 1개일 때 사용. -->
+    <script>
+        var score = prompt("Enter your score: ");
+        (score >= 60) ? alert("Pass") : alert("Fail");
+        // 점수가 60 이상이면 ?
+                    // Pass라고 알림창 띄우고
+                                    // : 아니면 Fail을 알림창 띄우고..
+    </script>
+
+
+    <!-- 사실 이건 자바에서 공부하고 와야지 왜 html 파일에서 이러고 있어 .. -->
+
+    <!-- for문 파이썬
+	sum = 0
+	for i in range(5):
+		 sum += i
+		 print(sum)
+	output = 15 -->
+
+	<script>
+		var sum = 0;
+		for (var i = 1; i < 6; i++)
+		// 1. var i = 1; 	변수 i 는 1이다.
+		// 2. i < 6;		i는 6보다 작은 수까지다.
+        // 4. i++: 카운터 변수 조절. 중괄호를 실행한 이후 카운터 변수인 i를 1만큼씩만 증가시켜서 for문을 돌리겠다는 것.
+		{
+			sum = sum + i;  // sum += i;
+			// 3. sum 에 i를 더해준다.
+
+        }
+        document.write("1부터 5까지 더하면 " + sum)
+	</script>
+
+</body>
+</html>

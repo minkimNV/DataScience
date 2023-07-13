@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>나이 계산하기</title>
+	<link rel="stylesheet" href="css/age.css">
+
+	<script>
+		function cal()
+		{
+			var currentYear = "2023";
+			var birthYear = prompt("태어난 연도를 입력하세요", "YYYY");
+							// 값을 currentYear 처럼 지정해서 입력해줘도 된다.
+			var age;
+
+			age = currentYear - birthYear + 1;
+			document.querySelector("#result").innerHTML = "당신의 나이는 " + age + "세 입니다.";
+			// 문서(document)에서
+			// (querySelector) 선택자를 사용하여
+			// id 값이 result인 태그("#result")를 선택하고
+			// HTML에 삽입한다(innerHTML).
+			// e.g.,
+				// var originPrice = document.querySelector("#oPrice").value
+				// HTML 문서에서 선택자로 id가 oPrice태그를 선택하여 그 안의 값(value)를 가져와 각각의 변수에 할당
+		}
+	</script>
+</head>
+<body>	
+	<button class="btn" onclick="cal()">나이 계산하기</button>
+	<div id="result" class="show">(결과 값 표시)</div>
+	<!-- <div></div>를 통해 구역을 지정해서 결과를 보여줄건데
+		 id가 result인 태그를 가지고 와서 보여줘. -->
+
+</body>
+</html>

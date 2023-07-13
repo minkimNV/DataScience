@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>팩토리얼 계산하기</title>
+	<link rel="stylesheet" href="css/factorial.css">
+</head>
+
+<body>
+	<script>
+		var num = prompt("숫자를 입력하세요.");
+		var nFact = 1;	// 곱한 값을 넣어줄거니까 1부터 시작
+		var i = 2;		// 팩토리얼 1!은 어차피 1이니까 2부터 시작
+
+		while (i <= num)
+		// 1. i가 입력받은 숫자보다 작거나 같으면 while문을 돌려요
+		{
+			nFact = nFact * i; // nFact *= i;
+			// 2. nFact에 i값을 2부터 순차적으로 곱해줄거고
+			i++;
+			// 3. i값 곱해주고 나면 다음 i값은 이전보다 1만큼만 커져요
+
+		}
+		// 4. 다 돌렸으면
+		document.write(num + "! = " + nFact);
+		// 5. 이렇게 팩토리얼 값을 화면에 써주세요
+
+
+		/* 아웃풋 num + "!=" + nFact 인데 내가 num 대신 i를 썼더니
+			값은 5!의 값인데 6! = 120 이라는 결과가 떴다.
+			i는 num=5 만큼 while문을 돌리고 마지막엔 1만큼 커지고 while문이 끝나니까;
+			그런거다.. */
+	</script>
+
+</body>
+</html>
