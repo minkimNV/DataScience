@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/register.css">
+	<title>회원 가입</title>
+</head>
+<body>
+	<div id="container">
+		<h1>회원 가입</h1>
+		<form action="#" id="register">
+			<ul id="user-info">
+				<li>
+					<label for="user-id" class="field">아이디</label>
+					<input type="text" id="user-id" placeholder="4~15자리의 영문과 숫자로 입력" required>
+					<!-- 아이디가 4~15자리로 입력됐는지 안됐는지 확인하는 함수를 만들 수 있겠지용? -->
+				</li>
+				<li>
+					<label for="email" class="field">이메일</label>
+					<input type="email" id="email" required>
+				</li>
+				<li>
+					<label for="user-pw1" class="field">비밀번호</label>
+					<input type="password" id="user-pw1" placeholder="8자리 이상" required>
+					<!-- 비밀번호가 8자리 이상으로 입력됐는지 확인하는 함수를 만들 수 있겠쥬 -->
+				</li>
+				<li>
+					<label for="user-pw2" class="field">비밀번호 확인</label>
+					<input type="password" id="user-pw2" required>
+					<!-- 비밀번호를 동일하게 썼는지 확인하는 함수를 만들 수 있겠ㅈ -->
+				</li>
+				<li>
+					<label class="field">메일링 수신</label>
+					<label class="r"><input type="radio" value="yes" name="mailing">예</label>
+					<label class="r"><input type="radio" value="no" name="mailing">아니오</label>
+				</li>
+			</ul>
+			<ul id="buttons">
+				<li>
+					<button type="submit" class="btn btnBlack">가입하기</button>					
+				</li>
+				<li>
+					<button type="reseet" class="btn btnGray">취소</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<script>
+		// 아이디가 4~15자리인지 확인하는 함수 만들기
+		var userId = document.getElementById("user-id");		
+		// id = user-id	에서 요소를 가지고 와서 userId 변수에 넣어준다.
+		userId.onchange = function () {
+		// 변수.onchange 지정 변수의 변하는 값에 대한 이벤트 (function/함수) 실행
+			if (userId.value.length <= 3 || userId.value.length >= 14) {
+				alert("아이디는 4자리 이상 14자리 이하로 입력해야 합니다.");
+				userId.select()
+				// .select() 는 입력된 문자열을 블록으로 잡아주는 기능을 해용..
+				// .focus() 는 입력된 문자열에 빨간 밑줄을 그어줘용..
+			}
+		}
+		// 비밀번호 자릿수에 대한 유효성 검사와 비밀번호 확인 검사 함수 만들기
+				// var userPW1 = document.getElementById("user-pw1");
+				// var userPW2 = document.getElementById("user-pw2");
+				// userPW1.onchange = function () {
+				// 	// 1. 비밀번호가 8자리 이상이 아니라면 경고창 출력
+				// 	if (userPW1.value.length < 8) {
+				// 		alert("비밀번호는 8자리 이상으로 입력해야 합니다.");
+				// 		userPW1.select();
+				// 	}
+				// 	// 2. 비밀번호랑 비밀번호 확인의 2개 값이 다르면 경고창 출력
+				// 		// 여기에 넣으면 userPW1 하나 썼을 때 이미 경고창 뜸.
+				// }
+
+				// userPW2.onchange = function () {
+				// 	if (userPW1 != userPW2) {
+				// 		alert("비밀번호를 다시 확인 후 입력해주십시오.");
+				// 		userPW2.focus();
+				// 	}
+				// }
+
+		var password = document.querySelector("input[type=password]");
+		// (input type이 password인 값을) 가지고와서 password 변수에 넣어준다
+		password[0].onchange = function() {
+			if (password[0].value.length < 8) {
+				alert("비밀번호는 8자리 이상으로 입력해야 합니다.");
+			}
+		}
+		password[1].onchange = function() {
+			if (password[0] != password[1]) {
+				alert("비밀번호를 다시 확인 후 입력해주십시오.");
+			}
+		}
+	</script>
+</body>
+</html>
