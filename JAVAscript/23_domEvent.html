@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>이벤트 처리하기</title>
+	<link rel="stylesheet" href="css/domevent.css">
+</head>
+
+
+<body>
+	<div id="container">
+		<img id="pic" src="images/girl.png" alt="">
+	</div>
+
+	<!-- <script src="js/domevent.js"> -->
+	<script>
+		var picture = document.querySelector("img");
+		// 웹 브라우저에 있는 사진 파일을 가지고 와서 picture 변수에 넣는다
+		picture.onmouseover = function() {
+			picture.src = "images/boy.png";
+		}
+		// picture.onmouseover 마우스를 사진에 올리면
+		// picture.src를 남자애 사진으로 바꾼다.
+
+		picture.onmouseout = function() {
+			picture.src = "images/girl.png";
+		}
+		// picture.onmouseout 마우스를 사진에서 떼면
+		// 여자애 사진으로 바꾼다.
+
+			// addEventListener를 사용한 방법
+				// picture.addEventListener("mouseover", function() {
+				// 	picture.src = "images/boy.png"
+				// })
+					// "mouseover"되면 function 해주는 addEventListener
+				// picture.addEventListener("mouseout", function() {
+				// 	picture.src = "images/girl.png"
+				// })
+	</script>
+</body>
+</html>

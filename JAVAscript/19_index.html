@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>To do list</title>
+	<link rel="stylesheet" href="css/input.css">
+	<link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+	<div id="wrapper">
+		<h2>여행 준비물 점검 목록</h2>
+		<form action = "#">
+			<!-- #이 뭐냐면 #에다가 이 데이터를 보내겠다는 의미.. -->
+			<input type="text" id="item" autofocus="true">
+			<button type="button" id="add" class="addBtn">추가</button>
+		</form>
+		<div id="itemList">
+			<ul>
+			</ul>
+		</div>
+	</div>    
+	<script>
+		var itemList = []
+		var addBtn = document.querySelector("#add");
+		addBtn.onclick = function() {
+			var inputTag = document.querySelector("#item");
+			intputValue = inputTag.value;
+			itemList.push(intputValue);
+			// console.log(itemList); // 잘 작동하나 확인..
+			inputTag.value = "";
+			inputTag.focus();
+			showList();
+		}
+			// 추가한 아이템들을 화면에 보일 수 있는 함수 만들기
+		
+		function showList()
+		{
+			var tag = "<ul>"
+			for (let i = 0; i < itemList.length; i++)
+			{
+				tag = `${tag}<li>${itemList[i]}<spam class = "close"> X </spam></li>`
+			}
+			tag = tag + "</ul>"
+			document.querySelector("#itemList").innerHTML = tag;
+
+			var delBtn = document.querySelectorAll(".close");
+			for (let j = 0; j < delBtn.length; j++)
+			{
+				delBtn[j].onclick = function() {
+					itemList.splice(j, 1);
+					showList();
+				}
+			}
+		}
+
+		
+	</script>
+</body>
+</html>

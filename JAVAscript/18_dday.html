@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>D-Day for love</title>
+	<link href="css/d-day.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="day1">
+			<h3>우리 만난지</h3>
+			<p id="accent" class="accent">
+				<!-- 아이디가 accent 인 곳에 우리가 만난지 며칠째인지 써넣어야 해요 -->
+				<span style="font-size:0.6em; font-style:italic"></span>
+			</p>
+			</div>
+			<div class="bar">기념일 계산</div>
+			<div class="day2">
+				<ul>
+					<li class="item-title">100일</li>         
+					<li class="item-date" id="date100"></li>
+				</ul>
+				<ul>
+					<li class="item-title">200일</li>
+					<li class="item-date" id="date200"></li>
+				</ul>     
+				<ul>
+					<li class="item-title">1년</li>
+					<li class="item-date" id="date365"></li>
+				</ul>      
+				<ul>
+					<li class="item-title">500일</li>
+					<li class="item-date" id="date500"></li>
+				</ul>      									     
+			</div>
+		</div>
+		<script>
+			var now = new Date();
+			var firstDay = new Date("2023-07-03");
+
+			var unixNow = now.getTime();
+			var unixFirstDay = firstDay.getTime();
+			// 유닉스 시간으로 바꿔주기 (밀리초)
+
+			var meetDay = unixNow - unixFirstDay;
+			var meetDayConvert = Math.round(meetDay/(1000*60*60*24));
+			// 결과값이 밀리초이기 때문에 날짜로 바꿔주려고 round(day/(1000*60*60*24))
+			// console.log(meetDayConvert); // 맞게 계산 되는지 확인해보아요
+
+			document.querySelector("#accent").innerText = `${meetDayConvert}일`
+			// 아이디가 accent 태그인 곳에 우리가 만난지 며칠 됐는지 텍스트를 넣어주어요
+
+							// var future100 = unixFirstDay + 100 * (1000*60*60*24);
+							// // console.log(future100); // 유닉스 시간
+							// var convert100 = new Date(future100);
+							// // 날짜로 변환..
+							// var year100 = convert100.getFullYear();
+							// var month100 = convert100.getMonth()+1;
+							// var date100 = convert100.getDate();
+
+							// document.querySelector("#date100").innerText = `${year100}년 ${month100}월 ${date100}일`;
+
+							// // 100일 계산부터는 반복되기 때문에 함수로 바꿔서 해볼게요..
+
+					// function calcDay(paramDay)
+					// {
+					// 	var future = unixFirstDay + paramDay * (1000*60*60*24);
+					// 	var convert = new Date(future);
+					// 	var year = convert.getFullYear();
+					// 	var month = convert.getMonth()+1;
+					// 	var date = convert.getDate();
+
+					// 	document.querySelector(`#date${paramDay}`).innerText = `${year}년 ${month}월 ${date}일`;
+					// }
+
+					// calcDay(100);
+					// calcDay(200);
+					// // calcDay(300); // 헤헤 이건 없는데 넣어서 갑자기 1년이랑 500일이 뜨지 않았던거야
+					// calcDay(365);
+					// calcDay(500);
+
+			// for문 으로도 해볼게요..
+			dayArray = [100, 200, 365, 500];
+			for (let i = 0; i < dayArray.length; i++)
+			{
+				var future = unixFirstDay + dayArray[i] * (1000*60*60*24);
+				var convert = new Date(future);
+				var year = convert.getFullYear();
+				var month = convert.getMonth()+1;
+				var date = convert.getDate();
+
+				document.querySelector(`#date${dayArray[i]}`).innerText = `${year}년 ${month}월 ${date}일`;
+			
+			}
+
+
+		</script>
+	</body>
+	</html>
