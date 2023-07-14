@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>객체 만들기</title>
+	<link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+	<h1> 가족 객체 </h1>
+	<p> 테스트로 작성 </p>
+	<script>
+		function Family(relation, name, job)
+		{
+			this.relation = relation; // 입력되는 데이터를 변수에 넣어준다.
+			this.name = name;
+			this.job = job;
+		}
+
+		/* 1. 관계, 이름, 직업을 매개변수로 넣을 가족 함수를 만들어준다.
+			2. 각 매개변수에 입력되는 데이터를 변수에 넣어준다. this. 사용 */
+
+		dad = new Family("아버지", "김진영", "건축");
+		mom = new Family("어머니", "김양순", "계산원");
+		oldbro = new Family("오빠", "김민우", "경찰");
+		youngbro = new Family("동생", "김민규", "학생");
+		
+		// document.write(`<p>${dad.relation}, ${dad.name}, ${dad.job}</p>`)
+		// 이렇게 일일이 쓰면 에바니까 반복문으로 응용을 해볼까용
+
+
+		/* 1. 반복문 응용을 위해 리스트를 만들어준다.
+			2. 리스트 길이만큼 for문을 실행하며
+			3. 문서에 작성할 것을 써내려간다. */
+		var familyArray = [dad, mom, oldbro, youngbro];
+		
+		for (let i = 0; i < familyArray.length; i++) {
+			document.write(`<p>${familyArray[i].relation}, ${familyArray[i].name}, ${familyArray[i].job}</p>`)
+		}
+	</script>
+</body>
+</html>
