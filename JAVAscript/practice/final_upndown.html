@@ -40,6 +40,7 @@
 				}
 				else {
 					document.querySelector("#display").innerHTML = "숫자만 입력해주세요.";
+									// 여기 if-elif-else문에서도 innerText로 썼는데 안되서 HTML로 바꿨다.. 왜 안되는지 질문하고 돌아올ㄱ게용..
 				}
 				inputTag.select();
 			}
@@ -47,7 +48,9 @@
 				correctAns = document.querySelector("#display")
 				correctAns.style.color = "red";
 				correctAns.innerHTML = "맞췄습니다!";
-				
+				/* document.getElementById("display").innerHTML = 
+					"<span style='color:red'>맞혔습니다!</span>"; */
+					// 이렇게 간단히 할 수도 있다!!				
 			}
 
 			tryCnt++;
