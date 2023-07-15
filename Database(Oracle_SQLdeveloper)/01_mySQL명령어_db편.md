@@ -2,19 +2,25 @@
 ### 버전확인
 <img width="215" alt="mysql버전확인" src="https://github.com/minkim7704/DataScience/assets/49539711/93e6a315-94c0-405c-9ea7-2fd02a3e0594"><br><br><br>
 
+### 데이터베이스 보기
+SHOW DATABASES는 데이터베이스를 조회하는 쿼리이다<br>
+<img width="209" alt="mysql데이터베이스보기" src="https://github.com/minkim7704/DataScience/assets/49539711/e9c1328f-f6d9-42e6-8909-66acd2259373">
+- 4개의 데이터베이스가 있다.<br><br><br><br>
+
+
 ## 데이터베이스 관련 명령어
 - CREATE
 - DROP
 - USE
 <br><br>
 
-### 데이터베이스 보기
-SHOW DATABASES는 데이터베이스를 조회하는 쿼리이다<br>
-<img width="209" alt="mysql데이터베이스보기" src="https://github.com/minkim7704/DataScience/assets/49539711/e9c1328f-f6d9-42e6-8909-66acd2259373">
-- 4개의 데이터베이스가 있다.<br><br><br><br>
-
-### 데이터베이스 생성하기
-<img width="647" alt="mysql생성삭제" src="https://github.com/minkim7704/DataScience/assets/49539711/addb973f-c053-4b50-80d5-d7761ad84cf9">
+### 데이터베이스 생성 및 삭제
+<img width="647" alt="mysql생성삭제" src="https://github.com/minkim7704/DataScience/assets/49539711/d15f8c66-e3f4-49df-b3db-f048ec98ffcf">
+차례대로
+1. 생성 `CREATE DATABASE`
+2. 생성 확인 `SHOW DATABASES`
+3. 삭제 `DROP DATABASE`
+4. 삭제 확인 `SHOW DATABASES`
 <br><br><br><br>
 
 ### 특정 데이터베이스 선택하기 
