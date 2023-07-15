@@ -1,11 +1,12 @@
 
 ### 버전확인
-<img width="215" alt="mysql버전확인" src="https://github.com/minkim7704/DataScience/assets/49539711/93e6a315-94c0-405c-9ea7-2fd02a3e0594"><br><br><br><br>
+<img width="215" alt="mysql버전확인" src="https://github.com/minkim7704/DataScience/assets/49539711/93e6a315-94c0-405c-9ea7-2fd02a3e0594"><br><br><br>
 
 ## 데이터베이스 관련 명령어
 - CREATE
 - DROP
 - USE
+<br><br>
 
 ### 데이터베이스 보기
 SHOW DATABASES는 데이터베이스를 조회하는 쿼리이다<br>
