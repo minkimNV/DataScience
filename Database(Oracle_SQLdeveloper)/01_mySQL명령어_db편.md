@@ -15,7 +15,7 @@ SHOW DATABASES는 데이터베이스를 조회하는 쿼리이다<br>
 <br><br>
 
 ### 데이터베이스 생성 및 삭제
-<img width="647" alt="mysql생성삭제" src="https://github.com/minkim7704/DataScience/assets/49539711/d15f8c66-e3f4-49df-b3db-f048ec98ffcf">
+<img width="647" alt="mysql생성삭제" src="https://github.com/minkim7704/DataScience/assets/49539711/d15f8c66-e3f4-49df-b3db-f048ec98ffcf"><br>
 차례대로
 1. 생성 `CREATE DATABASE`
 2. 생성 확인 `SHOW DATABASES`
