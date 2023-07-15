@@ -14,7 +14,8 @@ SHOW DATABASES는 데이터베이스를 조회하는 쿼리이다<br>
 - 4개의 데이터베이스가 있다.<br><br><br><br>
 
 ### 데이터베이스 생성하기
-<img width="552" alt="mysql_db생성" src="https://github.com/minkim7704/DataScience/assets/49539711/add42510-550e-47fa-8ca2-0a94ae7497bc"><br><br><br><br>
+<img width="647" alt="mysql생성삭제" src="https://github.com/minkim7704/DataScience/assets/49539711/addb973f-c053-4b50-80d5-d7761ad84cf9">
+<br><br><br><br>
 
 ### 특정 데이터베이스 선택하기 
 <img width="555" alt="mysql사용" src="https://github.com/minkim7704/DataScience/assets/49539711/0419cfd6-a58e-4db8-bd29-ef38b90f65d4"><br>
