@@ -25,17 +25,15 @@ def solution(n, lost, reserve):
             new_lost.append(i)
 
     ''' 1. lost, reserve에 들어가 있지 않은 학생을 찾아서 넣을 리스트를 만들었다.
-        여기서부터 체육 수업을 들을 수 있는 학생을 append 해가려니 문제가 생긴 것 같다.
-    '''
+        여기서부터 체육 수업을 들을 수 있는 학생을 append 해가려니 문제가 생긴 것 같다.'''
     pe = []
     for i in range(1, n + 1):
         if i not in new_reserve and i not in new_lost:
             pe.append(i)
 
-    ''' 2번 4번이 체육복 분실자, 1번 3번 5번이 체육복 여벌이 있는 사람일 때
-    1번 여벌자는 여벌자여서 수업참여리스트에 추가되고
-    2번한테 빌려줘서 2번도 수업참여리스트에 추가된다.
-    근데 3번여벌자의 경우에도 2번한테 빌려주려고 한다.. 분실자 리스트에서 이미 대여 받은 사람을 삭제하지 않아서..'''
+    ''' 수업 참여 리스트에 학생을 추가하려고 할지라도
+        분실자 리스트에서 체육복을 대여받은 분실자는 삭제해주어야 한다.
+        그렇지 않으면 분실자한테 중복으로 대여를 해주려는 일이 발생함.. '''
     for i in new_reserve:
         pe.append(i)
         if i-1 in new_lost:
@@ -45,5 +43,24 @@ def solution(n, lost, reserve):
             pe.append(i+1)
             new_lost.remove(i+1)
     return len(pe)
-
     '''그래서 new_lost.remove를 추가해줬다 ; '''
+
+
+
+
+def solution(n, lost, reserve):
+    lost.sort()
+    reserve.sort()
+    new_reserve = [x for x in reserve if x not in lost]
+    new_lost = [x for x in lost if x not in reserve]
+    print(new_lost)
+    print(new_reserve)
+
+    for i in new_reserve:
+        if i-1 in new_lost:
+            new_lost.remove(i-1)
+        elif i+1 in new_lost:
+            new_lost.remove((i+1))
+    return n - len(new_lost)
+
+'''더 간단하게 이렇게 할 수도 있다.'''
