@@ -10,11 +10,22 @@
 #     부서 4 제외
 #     다시 확인 if 부서1 + 부서2+ 부서3 + 부서4 + 부서5 < 예산:
 
-def solution(dept, budget):
-    dept.sort()
-    while sum(dept) > budget:
-        dept.pop()
-    return len(dept)
+def solution(d, budget):
+    answer = len(d)
+    d.sort()
+    for i in range(len(d), 0, -1):
+        if sum(d[:i]) > budget:
+            d.pop()
+            answer -= 1
+    return answer
+
+
+            # def solution(dept, budget):
+            #     dept.sort()
+            #     while sum(dept) > budget:
+            #         dept.pop()
+            #     return len(dept)
 
 # print(solution([1,3,2,5,4], 9))
 # print(solution([2,2,3,3], 10))
+
