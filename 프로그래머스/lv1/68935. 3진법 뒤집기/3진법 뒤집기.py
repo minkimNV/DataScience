@@ -6,8 +6,11 @@ def solution(n):
         base3 += str(mod)
     # 여기까지 3진법 변환. n의 3진법
 
+    # print(base3) = 0021 : 앞뒤반전의 3진법
     reverse_base3 = base3[::-1]
-    # 앞뒤반전의 3진법
+    # n의 3진법을 보려면 역순의 진수를 뒤집어주어야 한다
+    # 이것이 n의 3진법..
+    
     base10 = int(base3, 3)
     # 3진법의 base3을 10진수로 바꾸는 기본 함수
 
