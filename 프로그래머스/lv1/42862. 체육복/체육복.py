@@ -1,48 +1,49 @@
-
 '''
-0. 학생은 체격순 정렬.
-1. 전체 학생 중에 lost, reserve에 없는 학생은 무조건 체육 수업을 듣는다.
-2. reserve에 있는 학생이 lost에도 있을 수 있다. 얘네들도 무조건 체육 수업을 듣는다.
-3. 2, 4번이 분실하고 3번만 여분이 있을 때 3번은 양쪽에 빌려줄 수 있다.
-    + 2, 4번이 분실하고 3, 5번에게 여분이 있을 때 여분이 있는 사람들은 왼쪽 (i-1)에 있는 사람한테 빌려줘야 한다.
+1. 양 옆에만 빌려줄 수 있다 -> 우선순위 방향
+    - 2번 4번이 잃어버리고 3번 5번이 여벌이 있다
+    - 3이 4한테 빌려주면 2번이 못받으므로 n-1에게 우선적으로 빌려준다.
+    - 1번 3번이 잃어버리고 2번 4번이 여벌이 있다
+    - n-1에게 우선적으로 빌려준다
+    - 3번 5번이 잃어버리고 2번 4번이 여벌이 있다
+    - 2번은 우선적으로 n-1번한테 빌려주려고 한다. n-1이 없어서 n+1한테 빌려준다. 4번도 우선적으로 n-1번한테 빌려주려고 한다. ... -> 한번 빌려준 애는 여벌 배열에서 빼고 빌린 애도 도난 배열에서 빼야 한다.
+2. 여벌 학생이 도난 당했을 수 있다 -> 도난 배열, 여벌 배열에서 여벌 학생 삭제
+n = 학생 수
+lost = [도난 학생 배열]
+reserve = [여벌 학생 배열]
 '''
 
 
 def solution(n, lost, reserve):
-    # 0. 학생은 체격순 정렬.
     lost.sort()
     reserve.sort()
-
-    # 2. reserve와 lost에 중복으로 있는 학생 제거한 새로운 reserve, lost 리스트 생성
-    new_reserve = []
+    # 1. 여벌 학생이 도난 당했을 수 있으므로 여벌 학생을 제거한 새로운 도난 배열 생성 및 추가
     new_lost = []
-    for i in reserve:
-        if i not in lost:
-            new_reserve.append(i)
+    for student in lost:
+        if student not in reserve:
+            new_lost.append(student)
 
-    for i in lost:
-        if i not in reserve:
-            new_lost.append(i)
+    # 더 간단히
+    # new_lost = [student for student in lost if student not in reserve]
 
-    ''' 1. lost, reserve에 들어가 있지 않은 학생을 찾아서 넣을 리스트를 만들었다.
-        여기서부터 체육 수업을 들을 수 있는 학생을 append 해가려니 문제가 생긴 것 같다.
-    '''
-    pe = []
-    for i in range(1, n + 1):
-        if i not in new_reserve and i not in new_lost:
-            pe.append(i)
+    # 2. 여벌 학생이 도난 당했을 수 있으므로 여벌 학생을 제거한 새로운 여벌 배열 생성 및 추가
+    new_reserve = []
+    for student in reserve:
+        if student not in lost:
+            new_reserve.append(student)
 
-    ''' 2번 4번이 체육복 분실자, 1번 3번 5번이 체육복 여벌이 있는 사람일 때
-    1번 여벌자는 여벌자여서 수업참여리스트에 추가되고
-    2번한테 빌려줘서 2번도 수업참여리스트에 추가된다.
-    근데 3번여벌자의 경우에도 2번한테 빌려주려고 한다.. 분실자 리스트에서 이미 대여 받은 사람을 삭제하지 않아서..'''
+    # 더 간단히
+    # new_reserve = [student for student in reserve if student not in lost]
+
+    # 3. 빌려주기 시작
     for i in new_reserve:
-        pe.append(i)
         if i-1 in new_lost:
-            pe.append(i-1)
             new_lost.remove(i-1)
         elif i+1 in new_lost:
-            pe.append(i+1)
             new_lost.remove(i+1)
-    return len(pe)
-    '''그래서 new_lost.remove를 추가해줬다 ; '''
+
+    return n - len(new_lost)
+
+# print(solution(5, [2,5,4], [3,5]))
+# print(solution(5, [2,4], [1,3,5]))
+# print(solution(5, [3, 5], [2, 4]))
+# print(solution(5, [2, 3, 5], [2, 3, 4]))
