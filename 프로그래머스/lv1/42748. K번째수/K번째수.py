@@ -1,11 +1,23 @@
-array = [1, 5, 2, 6, 3, 7, 4]
-commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+'''
+1. 배열 array를 i 부터 j 까지 자르고, 2. 정렬한 후, 3. k번 째 수를 반환
+    - 예: array = [1,5,2,6,3,7,4]
+        두번째부터 다섯번째까지 자르려면 array[2:5]가 아니고! array[1:5]
+    - 마찬가지로 k번 째 수를 반환하려면 array[k]가 아니고 array[k-1]!
+
+array = [자르고 어쩌구 저쩌구 할 배열]
+commands = [[i, j, k]에 대한 2차원 배열]
+각 [i,j,k]로 array 어쩌구 저쩌구 한 값을 반환 -> 즉 command length만큼의 값을 반환해야 한다.
+'''
 
 def solution(array, commands):
     answer = []
+
     for i, j, k in commands:
-        temp = array[i-1:j]         # array 인덱스 i-1부터 j까지만 임시 리스트
-                                        # 인덱스 슬라이싱 쓸 때 [:j]를 뽑는다고 하면 인덱스 j-1까지만 뽑아준당..
-        temp = sorted(temp)         # 리스트 오름차순 배열
-        answer.append(temp[k-1])    # 그중에 인덱스 k-1에 있는 친구를 answer에 append
+        tmp = array[i-1:j]
+        tmp.sort()
+        answer.append(tmp[k-1])
     return answer
+
+
+
+# print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
