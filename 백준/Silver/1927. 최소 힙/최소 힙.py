@@ -1,10 +1,10 @@
 import heapq, sys
 input = sys.stdin.readline
 n = int(input())
-numbers = [int(input()) for _ in range(n)]
 hip = []
 
-for x in numbers:
+for i in range(n):
+    x = int(input())
     if x == 0:
         if len(hip) == 0:
             print(0)
